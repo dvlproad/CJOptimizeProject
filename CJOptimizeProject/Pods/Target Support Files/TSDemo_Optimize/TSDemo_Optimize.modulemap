@@ -1,0 +1,6 @@
+framework module TSDemo_Optimize {
+  umbrella header "TSDemo_Optimize-umbrella.h"
+
+  export *
+  module * { export * }
+}

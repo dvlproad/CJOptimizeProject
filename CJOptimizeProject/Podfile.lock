@@ -1,0 +1,89 @@
+PODS:
+  - CJBaseHelper/HookCJHelper (0.1.7)
+  - CJBaseHelper/UIViewControllerCJHelper (0.1.7)
+  - CQDemoKit (0.6.9):
+    - CQDemoKit/BaseUIKit (= 0.6.9)
+    - CQDemoKit/BaseUtil (= 0.6.9)
+    - CQDemoKit/BaseVC (= 0.6.9)
+    - CQDemoKit/Demo_Resource (= 0.6.9)
+    - CQDemoKit/Demo_RipeView (= 0.6.9)
+    - CQDemoKit/Helper (= 0.6.9)
+    - CQDemoKit/Monitor (= 0.6.9)
+  - CQDemoKit/BaseUIKit (0.6.9):
+    - Masonry
+  - CQDemoKit/BaseUtil (0.6.9)
+  - CQDemoKit/BaseVC (0.6.9):
+    - CQDemoKit/BaseVC/Base (= 0.6.9)
+    - CQDemoKit/BaseVC/Collection (= 0.6.9)
+    - CQDemoKit/BaseVC/ScrollView (= 0.6.9)
+    - CQDemoKit/BaseVC/TabBar (= 0.6.9)
+    - CQDemoKit/BaseVC/TableView (= 0.6.9)
+    - CQDemoKit/BaseVC/TextView (= 0.6.9)
+    - CQDemoKit/Helper
+  - CQDemoKit/BaseVC/Base (0.6.9):
+    - CQDemoKit/BaseUIKit
+    - CQDemoKit/Helper
+    - Masonry
+  - CQDemoKit/BaseVC/Collection (0.6.9):
+    - CQDemoKit/BaseVC/Base
+    - CQDemoKit/Helper
+  - CQDemoKit/BaseVC/ScrollView (0.6.9):
+    - CQDemoKit/BaseVC/Base
+    - CQDemoKit/Helper
+  - CQDemoKit/BaseVC/TabBar (0.6.9):
+    - CQDemoKit/Helper
+  - CQDemoKit/BaseVC/TableView (0.6.9):
+    - CQDemoKit/BaseVC/Base
+    - CQDemoKit/Helper
+  - CQDemoKit/BaseVC/TextView (0.6.9):
+    - CQDemoKit/BaseUtil
+    - CQDemoKit/BaseVC/Base
+    - CQDemoKit/Helper
+  - CQDemoKit/Demo_Resource (0.6.9):
+    - CQDemoKit/BaseUIKit
+    - CQDemoKit/Helper
+  - CQDemoKit/Demo_RipeView (0.6.9):
+    - CQDemoKit/BaseUIKit
+    - CQDemoKit/BaseUtil
+    - CQDemoKit/Demo_Resource
+  - CQDemoKit/Helper (0.6.9)
+  - CQDemoKit/Monitor (0.6.9)
+  - FBRetainCycleDetector (0.1.4)
+  - Masonry (1.1.0)
+  - MLeaksFinder (1.0.0):
+    - FBRetainCycleDetector
+  - TSDemo_Optimize (0.5.2):
+    - CJBaseHelper/HookCJHelper
+    - CJBaseHelper/UIViewControllerCJHelper
+    - CQDemoKit
+
+DEPENDENCIES:
+  - CJBaseHelper/HookCJHelper (~> 0.1.7)
+  - CJBaseHelper/UIViewControllerCJHelper (~> 0.1.7)
+  - CQDemoKit/Helper (~> 0.6.9)
+  - MLeaksFinder
+  - TSDemo_Optimize (from `../CJOptimizeProject/`)
+
+SPEC REPOS:
+  trunk:
+    - CJBaseHelper
+    - CQDemoKit
+    - FBRetainCycleDetector
+    - Masonry
+    - MLeaksFinder
+
+EXTERNAL SOURCES:
+  TSDemo_Optimize:
+    :path: "../CJOptimizeProject/"
+
+SPEC CHECKSUMS:
+  CJBaseHelper: 71c9d695c76736b2fc66123157d5626da4556177
+  CQDemoKit: f7a6a6f2a7e3eea2a4a0684c654bfcf0360e6dca
+  FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
+  TSDemo_Optimize: 60228cebdaab6f802e2834e1df88021c0db30356
+
+PODFILE CHECKSUM: a7103787a793199f7190efd47a9b41b834069db3
+
+COCOAPODS: 1.12.1
