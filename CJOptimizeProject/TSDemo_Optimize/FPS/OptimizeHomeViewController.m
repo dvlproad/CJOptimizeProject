@@ -8,7 +8,10 @@
 
 #import "OptimizeHomeViewController.h"
 #import "TSOptimizeTableViewController.h"
+#import "TSMemoryViewController.h"
 #import "TSLeakViewController.h"
+#import "TSAllocationViewController.h"
+#import "TSZombieViewController.h"
 
 @interface OptimizeHomeViewController () {
     
@@ -42,27 +45,45 @@
         [sectionDataModels addObject:sectionDataModel];
     }
     
-    // Optimize
+    // FPS
     {
         CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
-        sectionDataModel.theme = @"优化UI";
+        sectionDataModel.theme = @"帧率FPS";
         {
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
             module.title = @"模拟卡顿FPS";
             module.classEntry = [TSOptimizeTableViewController class];
             [sectionDataModel.values addObject:module];
         }
+        [sectionDataModels addObject:sectionDataModel];
+    }
+    
+    // 内存
+    {
+        CQDMSectionDataModel *sectionDataModel = [[CQDMSectionDataModel alloc] init];
+        sectionDataModel.theme = @"内存";
+        {
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
+            module.title = @"计算图片所占内存";
+            module.classEntry = [TSMemoryViewController class];
+            [sectionDataModel.values addObject:module];
+        }
+        {
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
+            module.title = @"模拟Zombies野指针EXC_BAD_ACCESS";
+            module.classEntry = [TSZombieViewController class];
+            [sectionDataModel.values addObject:module];
+        }
         {
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
             module.title = @"模拟内存泄露Leak";
             module.classEntry = [TSLeakViewController class];
-//            module.actionBlock = ^{
-//                TSLeakViewController *viewController = [[TSLeakViewController alloc] init];
-//                viewController.leakBlock = ^(NSString * _Nonnull title) {
-//                    NSLog(@"%@", title);
-//                };
-//                [self.navigationController pushViewController:viewController animated:YES];
-//            };
+            [sectionDataModel.values addObject:module];
+        }
+        {
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
+            module.title = @"模拟检测Allocation";
+            module.classEntry = [TSAllocationViewController class];
             [sectionDataModel.values addObject:module];
         }
         

@@ -13,8 +13,12 @@
 #import "OptimizeHomeViewController.h"
 #import "TSOptimizeTableViewController.h"
 #import "CJAlertSwizzedHelper.h"
+#import "TSLookImageMemoryUtil.h"
 #import "TSOptimizeImageUtil.h"
+#import "TSAllocationViewController.h"
 #import "TSLeakViewController.h"
+#import "TSMemoryViewController.h"
+#import "TSZombieViewController.h"
 #import "OptimizeMainViewController.h"
 
 FOUNDATION_EXPORT double TSDemo_OptimizeVersionNumber;

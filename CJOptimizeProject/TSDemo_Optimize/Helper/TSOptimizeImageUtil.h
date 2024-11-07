@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TSOptimizeImageUtil : NSObject
 
+#pragma mark - 启动时间
++ (void)sleep;
+
 #pragma mark - 卡顿 1、耗时的计算
 + (void)performExpensiveOperation;
 

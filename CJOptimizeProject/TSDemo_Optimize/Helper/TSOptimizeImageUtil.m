@@ -10,17 +10,22 @@
 
 @implementation TSOptimizeImageUtil
 
+#pragma mark - 启动时间
++ (void)sleep {
+    sleep(2);
+    
+    [self performExpensiveOperation];
+}
+
 
 #pragma mark - 卡顿 1、耗时的计算
 // 模拟耗时操作，可能会导致主线程卡顿
 + (void)performExpensiveOperation {
-    NSLog(@"Start performing expensive operation");
     // 执行一个耗时的计算
     NSUInteger result = 0;
     for (int i = 0; i < 1000000; i++) {
         result += i;
     }
-    NSLog(@"Expensive operation completed with result: %lu", (unsigned long)result);
 }
 
 

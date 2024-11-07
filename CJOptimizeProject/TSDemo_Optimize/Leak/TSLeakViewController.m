@@ -62,6 +62,12 @@
     
     [self leakMemory];
     
+    //占用内存过高的代码
+    for (int i = 0; i < 10000; i++) {
+        UIView *view = [[UIView alloc]init];
+        view.backgroundColor = [UIColor redColor];
+    }
+    
     UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
     tableView.dataSource = self;
     tableView.delegate = self;
@@ -69,11 +75,7 @@
     [self.view addSubview:tableView];
     [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(button2.mas_bottom).offset(10);
-        if (@available(iOS 11.0, *)) {
-            make.bottom.equalTo(self.view.mas_safeAreaLayoutGuideBottom).offset(-10);
-        } else {
-            make.bottom.equalTo(self.mas_bottomLayoutGuideTop).offset(-10);
-        }
+        make.bottom.equalTo(self.view.mas_safeAreaLayoutGuideBottom).offset(-10);
         make.left.mas_equalTo(self.view).mas_offset(10);
         make.centerX.mas_equalTo(self.view);
     }];

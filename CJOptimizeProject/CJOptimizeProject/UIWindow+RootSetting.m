@@ -9,10 +9,13 @@
 #import "UIWindow+RootSetting.h"
 #import <CQDemoKit/CQTSFPSView.h>
 #import <TSDemo_Optimize/CJAlertSwizzedHelper.h>
+#import "TSOptimizeImageUtil.h"
 
 @implementation UIWindow (RootSetting)
 
 - (void)settingRoot {
+    //[TSOptimizeImageUtil sleep];    //sleep(2);
+    
     [self setBackgroundColor:[UIColor whiteColor]];
     // 只直接测试某个页面
 //    UIViewController *rootViewController = [[UINavigationController alloc] initWithRootViewController:[[NSClassFromString(@"BaseUIHomeViewController") alloc] init]];
