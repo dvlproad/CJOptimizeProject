@@ -4,4 +4,5 @@ ${BUILT_PRODUCTS_DIR}/CQDemoKit/CQDemoKit.framework
 ${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework
 ${BUILT_PRODUCTS_DIR}/MLeaksFinder/MLeaksFinder.framework
 ${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework
+${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
 ${BUILT_PRODUCTS_DIR}/TSDemo_Optimize/TSDemo_Optimize.framework

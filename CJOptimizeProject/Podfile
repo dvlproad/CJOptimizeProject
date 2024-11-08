@@ -36,6 +36,7 @@ target 'CJOptimizeProject' do
 #  pod 'CQDemoKit',          :path => '../../001-UIKit-CQDemo-iOS/'
   pod 'CQDemoKit',          '~> 0.6.9',          :subspecs => ['Helper']
   pod 'CJBaseHelper',       '~> 0.1.7',          :subspecs => ['HookCJHelper', 'UIViewControllerCJHelper']
+  pod 'SDWebImage'
 
   # [XCode14升级MLeaksFinder报错](https://blog.csdn.net/zcl369369/article/details/130828740)
   # [CJAlertSwizzedHelper swizzledMLLeakAlert]; // MLeaksFinder 使用 UIAlertView 导致崩溃，需要调用此方法来交换

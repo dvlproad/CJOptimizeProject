@@ -1,22 +1,22 @@
 //
-//  TSLeakViewController.m
+//  TSBlockLeakViewController.m
 //  TSDemo_Demo
 //
 //  Created by ciyouzen on 2017/2/25.
 //  Copyright © 2017年 dvlproad. All rights reserved.
 //
 
-#import "TSLeakViewController.h"
+#import "TSBlockLeakViewController.h"
 
 #import "TSOptimizeImageUtil.h"
 
-@interface TSLeakViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface TSBlockLeakViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property(nonnull, nonatomic, strong) NSMutableArray<NSString *> *imageNameArray;
 
 @end
 
-@implementation TSLeakViewController
+@implementation TSBlockLeakViewController
 
 - (void)dealloc {
     //NSLog(@"%s", __func__);
@@ -32,7 +32,7 @@
     
     self.view.backgroundColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:245/255.0 alpha:1.0]; // #f5f5f5
     
-    self.navigationItem.title = NSLocalizedString(@"模拟内存泄露Leak", nil);
+    self.navigationItem.title = NSLocalizedString(@"模拟内存泄露Leak_Block", nil);
     
     UIButton *button1 = [self themeBGButtonWithTitle:@"会泄露" action:@selector(leakMemoryCircularRreference:)];
     UIButton *button2 = [self themeBGButtonWithTitle:@"不泄露" action:@selector(leakMemoryCircularRreference:)];
@@ -91,12 +91,13 @@
     // 没有释放对象，导致内存泄漏
 }
 
+#pragma mark - Action
 // 内存泄漏示例--循环引用导致的
 - (void)leakMemoryCircularRreference:(UIButton *)button {
     //__weak typeof(self) weakSelf = self;
     //__strong __typeof(self) strongSelf = weakSelf;
     
-    TSLeakViewController *viewController = [[TSLeakViewController alloc] init];
+    TSBlockLeakViewController *viewController = [[TSBlockLeakViewController alloc] init];
     if ([button.titleLabel.text containsString:@"会泄露"]) {
         viewController.leakBlock = ^(NSString * _Nonnull title) {
             viewController.title = title; // 会泄露

@@ -8,8 +8,11 @@
 
 #import "OptimizeHomeViewController.h"
 #import "TSOptimizeTableViewController.h"
+
 #import "TSMemoryViewController.h"
-#import "TSLeakViewController.h"
+#import "TSBlockLeakViewController.h"
+#import "TSTimerLeakViewController.h"
+
 #import "TSAllocationViewController.h"
 #import "TSZombieViewController.h"
 
@@ -76,8 +79,14 @@
         }
         {
             CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
-            module.title = @"模拟内存泄露Leak";
-            module.classEntry = [TSLeakViewController class];
+            module.title = @"模拟内存泄露Leak_Block";
+            module.classEntry = [TSBlockLeakViewController class];
+            [sectionDataModel.values addObject:module];
+        }
+        {
+            CQDMModuleModel *module = [[CQDMModuleModel alloc] init];
+            module.title = @"模拟内存泄露Leak_Timer";
+            module.classEntry = [TSTimerLeakViewController class];
             [sectionDataModel.values addObject:module];
         }
         {

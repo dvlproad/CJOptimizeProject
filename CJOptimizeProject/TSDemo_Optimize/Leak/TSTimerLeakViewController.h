@@ -1,5 +1,5 @@
 //
-//  TSLeakViewController.h
+//  TSTimerLeakViewController.h
 //  TSDemo_Demo
 //
 //  Created by ciyouzen on 2017/2/25.
@@ -12,9 +12,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TSLeakViewController : UIViewController
-
-@property (nullable, nonatomic, copy) void(^leakBlock)(NSString *title); /**< 点击后执行的方法 */
+@interface TSTimerLeakViewController : UIViewController
 
 @end
 

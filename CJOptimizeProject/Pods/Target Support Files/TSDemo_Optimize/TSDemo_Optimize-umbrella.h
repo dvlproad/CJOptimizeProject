@@ -16,8 +16,9 @@
 #import "TSLookImageMemoryUtil.h"
 #import "TSOptimizeImageUtil.h"
 #import "TSAllocationViewController.h"
-#import "TSLeakViewController.h"
+#import "TSBlockLeakViewController.h"
 #import "TSMemoryViewController.h"
+#import "TSTimerLeakViewController.h"
 #import "TSZombieViewController.h"
 #import "OptimizeMainViewController.h"
 

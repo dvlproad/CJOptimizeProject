@@ -52,6 +52,9 @@ PODS:
   - Masonry (1.1.0)
   - MLeaksFinder (1.0.0):
     - FBRetainCycleDetector
+  - SDWebImage (5.18.6):
+    - SDWebImage/Core (= 5.18.6)
+  - SDWebImage/Core (5.18.6)
   - TSDemo_Optimize (0.5.2):
     - CJBaseHelper/HookCJHelper
     - CJBaseHelper/UIViewControllerCJHelper
@@ -62,6 +65,7 @@ DEPENDENCIES:
   - CJBaseHelper/UIViewControllerCJHelper (~> 0.1.7)
   - CQDemoKit/Helper (~> 0.6.9)
   - MLeaksFinder
+  - SDWebImage
   - TSDemo_Optimize (from `../CJOptimizeProject/`)
 
 SPEC REPOS:
@@ -71,6 +75,7 @@ SPEC REPOS:
     - FBRetainCycleDetector
     - Masonry
     - MLeaksFinder
+    - SDWebImage
 
 EXTERNAL SOURCES:
   TSDemo_Optimize:
@@ -82,8 +87,9 @@ SPEC CHECKSUMS:
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
+  SDWebImage: 3d8caa2430f3d674dbb3e515df4a100a2105af5f
   TSDemo_Optimize: 60228cebdaab6f802e2834e1df88021c0db30356
 
-PODFILE CHECKSUM: a7103787a793199f7190efd47a9b41b834069db3
+PODFILE CHECKSUM: e2d503aa7d1bd296e844e3c37ed9b712e3eadf1b
 
 COCOAPODS: 1.12.1
